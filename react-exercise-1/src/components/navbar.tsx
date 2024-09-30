@@ -1,6 +1,5 @@
 import React from "react";
 import {
-    Navbar,
     Collapse,
     Typography,
     IconButton,
@@ -13,18 +12,9 @@ export function NavBar() {
     const navigate = useNavigate()
 
     const navbarItems = [
-        {
-            label: "About",
-            path: '/about'
-        },
-        {
-            label: "Work",
-            path: '/work'
-        },
-        {
-            label: "Contact",
-            path: '/contact'
-        },
+        { label: "About", path: '/about' },
+        { label: "Work", path: '/work' },
+        { label: "Contact", path: '/contact' },
     ];
 
     const navList = (
@@ -58,10 +48,7 @@ export function NavBar() {
     }, []);
  
     return (
-        <Navbar 
-            fullWidth className="absolute top-0 left-0 w-full bg-transparent z-10 rounded-none shadow-none border-0 px-20 py-3" 
-            placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}
-        >
+        <div className="absolute top-0 left-0 w-full bg-transparent z-10 rounded-none shadow-none border-0 px-20 py-3">
             <div className="flex items-center justify-between">
                 <img src={Logo} alt="logo" onClick={() => navigate('/')} className="cursor-pointer" />
                 <div className="hidden lg:block">
@@ -84,6 +71,6 @@ export function NavBar() {
             <Collapse open={openNav}>
                 {navList}
             </Collapse>
-        </Navbar>
+        </div>
     );
 }
