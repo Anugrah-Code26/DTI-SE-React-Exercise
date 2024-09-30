@@ -11,8 +11,3 @@
 .animate-move-left {
     animation: moveLeft 15s linear infinite;
 }
-
-.custom-drawer {
-    width: 50vw !important;
-    max-width: 50vw !important;
-}
